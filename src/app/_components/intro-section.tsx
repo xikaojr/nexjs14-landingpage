@@ -1,5 +1,4 @@
 'use client';
-import { track } from '@vercel/analytics';
 
 import { ModeToggle } from './mode-toggle';
 import { cn } from '@/lib/utils';
@@ -29,35 +28,32 @@ function IntroSection() {
       </svg>
       <div className='container flex max-w-[64rem] flex-col items-center text-center gap-4'>
         <span className='rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium flex items-center'>
-          📅 Incscrições encerradas.
+          Escolha seu lado da força
           <ModeToggle />
         </span>
         <h1 className='font-heading text-4xl md:text-6xl lg:text-7xl'>
-          The Next Dev
-          <br />
-          Full-stack <span className='text-primary'>Next.js 14</span>
+          Desenvolvedor <span className='text-primary'>Full-stack</span>
         </h1>
         <p className='max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8'>
-          Invista na sua carreira e aprenda a desenvolver aplicações que as
-          grandes empresas estão utilizando. Faça parte da próxima turma da
-          formação mais completa de Next.js 14.
+          Como professor e entusiasta da programação, encontro imenso prazer em compartilhar meu conhecimento 
+          e experiência com a próxima geração de desenvolvedores. Estou constantemente explorando novas tecnologias, 
+          metodologias e práticas recomendadas para garantir que minha equipe e meus alunos estejam sempre na 
+          vanguarda da indústria.
         </p>
         <div className='space-x-4'>
           <a
             href='#investment'
             className='bg-primary py-2 px-4 text-md text-white rounded shadow-lg font-bold'
-            onClick={() => {
-              track('enrollment', { location: 'intro' });
+            onClick={() => { console.log('Quero fazer parte');
             }}
           >
-            Quero fazer parte
+            Entrar em contato
           </a>
           <a
             href='#feature'
             className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
-            onClick={() => {
-              track('features');
-            }}
+            onClick={() => { console.log('Saiba mais');
+             }}
           >
             Saiba mais
           </a>

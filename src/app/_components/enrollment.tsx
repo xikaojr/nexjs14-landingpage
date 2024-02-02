@@ -1,14 +1,14 @@
 'use client';
-import { track } from '@vercel/analytics';
 import Link from 'next/link';
 
 function Enrollment() {
   return (
     <Link
-      href='https://pay.hotmart.com/E88055193B?off=h8d9oi5k'
+      href='javascript:;'
       target='_blank'
-      onClick={() => {
-        track('enrollment', { location: 'investment' });
+      onClick={(event) => {
+        event.preventDefault();
+        alert("Matriculas em breve!")
       }}
       className='bg-primary hover:bg-primary text-white font-bold py-2 px-4 rounded shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105'
     >

@@ -54,7 +54,7 @@ function InvestmentSection() {
             <h4 className='font-bold text-xl'>ou R$ 978,00 à vista</h4> */}
           </div>
           <PreEnrollment />
-          {/* <Enrollment /> */}
+          <Enrollment />
         </div>
       </div>
     </section>

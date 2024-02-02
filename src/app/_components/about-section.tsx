@@ -4,7 +4,6 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
-  YoutTubeIcon,
 } from '@/components/social-icons';
 
 function SocialLink({ icon: Icon, ...props }: any) {
@@ -37,36 +36,27 @@ function AboutSection() {
         </div>
         <div className='lg:order-first lg:row-span-2 text-center md:text-start'>
           <h1 className='font-heading text-3xl md:text-4xl lg:text-5xl'>
-            @lucasnhimi
+            @xikaojr
           </h1>
           <p className='mt-6 text-base text-muted-foreground'>
-            CTO durante o dia, entusiasta de conteúdo digital à noite! Com mais
-            de 16 anos de experiência no mundo da tecnologia, já desempenhei
-            vários papéis como engenheiro de software, gerente de projetos e
-            inovador estratégico. Sou totalmente a favor de fomentar a
-            colaboração e inspirar equipes a criar soluções revolucionárias para
-            o sucesso dos negócios. Fora do escritório, você pode me encontrar
-            criando apaixonadamente conteúdo digital para inspirar, educar e
-            entreter. Sempre atento para aprender e me manter à frente das
-            tendências do mercado. Estou constantemente desafiando os limites da
-            tecnologia e da criatividade. Vivo e respiro tecnologia 24/7...
+          Líder de equipe e mentor durante o dia, amante da programação e apaixonado por resolver 
+          problemas complexos à noite! Com mais de 13 anos de experiência na indústria de tecnologia, 
+          trilhei um caminho diversificado desde o desenvolvimento de software até cargos de liderança técnica. 
+          Meu objetivo é impulsionar a excelência técnica, cultivar uma cultura de colaboração e 
+          capacitar minha equipe para superar desafios com inovação e criatividade.
           </p>
           <div className='mt-6 flex justify-center md:justify-start gap-6'>
             <SocialLink
-              href='https://instagram.com/lucasnhimi'
+              href='https://instagram.com/xikaojr'
               icon={InstagramIcon}
             />
             <SocialLink
-              href='https://github.com/lucasnhimi'
+              href='https://github.com/xikaojr'
               icon={GitHubIcon}
             />
             <SocialLink
-              href='https://linkedin.com/in/lucasnhimi'
+              href='https://linkedin.com/in/xikaojr'
               icon={LinkedInIcon}
-            />
-            <SocialLink
-              href='https://youtube.com/lucasnhimi'
-              icon={YoutTubeIcon}
             />
           </div>
         </div>

@@ -24,8 +24,8 @@ export default function Home() {
         <IntroSection />
         <AboutSection />
         <FeatureSection />
-        <InvestmentSection />
-        <FaqSection />
+        {/* <InvestmentSection /> */}
+        {/* <FaqSection /> */}
       </main>
     </>
   );
