@@ -18,17 +18,17 @@ function IntroSection() {
           cy='512'
           r='512'
           fill='url(#759c1415-0410-454c-8f7c-9a820de03641)'
-          fillOpacity='0.7'
+          fillOpacity='0.14'
         />
         <defs>
           <radialGradient id='759c1415-0410-454c-8f7c-9a820de03641'>
-            <stop stopColor='#7775D6' />
-            <stop offset='1' stopColor='#E935C1' />
+            <stop stopColor='#21c45dff' />
+            <stop offset='1' stopColor='#21c45dff' />
           </radialGradient>
         </defs>
       </svg>
       <div className='container flex max-w-[64rem] flex-col items-center text-center gap-4'>
-        <span className='rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium flex items-center'>
+        <span className='rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium flex items-center justify-center'>
           Escolha seu lado da força
           <ModeToggle />
         </span>
