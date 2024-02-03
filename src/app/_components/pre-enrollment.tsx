@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -23,6 +22,7 @@ import {
   DialogTrigger,
   DialogClose,
 } from '@/components/ui/dialog';
+import { Textarea } from "@/components/ui/textarea"
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 
@@ -44,6 +44,7 @@ const formScheme = z.object({
       },
       { message: 'Número de telefone inválido' }
     ),
+  about: z.string().min(10, { message: 'Digite o que você precisa que entrarei em contato!' })
 });
 
 function PreEnrollment() {
@@ -52,6 +53,7 @@ function PreEnrollment() {
     defaultValues: {
       name: '',
       email: '',
+      about: ''
     },
   });
 
@@ -63,6 +65,7 @@ function PreEnrollment() {
       name: values.name,
       email: values.email,
       phoneNumber: values.phoneNumber,
+      about: values.about
     });
   };
 
@@ -73,11 +76,11 @@ function PreEnrollment() {
           variant='default'
           size='lg'
           onClick={() => {
-            
+
           }}
           className='text-md bg-primary hover:bg-primary text-white font-bold py-2 px-4 rounded shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105'
         >
-          Lista de espera
+          Entrar em contato
         </Button>
       </DialogTrigger>
       <DialogContent className='sm:max-w[425px]'>
@@ -94,19 +97,18 @@ function PreEnrollment() {
               <DialogTitle>Parabéns! 🎉</DialogTitle>
               <DialogDescription className='space-y-4'>
                 <p>
-                  Suas informações foram enviadas para lista de espera. Aguarde
+                  Suas informações foram enviadas. Aguarde
                   que entraremos em contato.
                 </p>
                 <p>
-                  Entre para o grupo no WhatsApp clicando{' '}
+                  Caso prefira, envie-me uma mensagem através do meu WhatsApp clicando{' '}
                   <a
                     className='text-bold text-primary underline'
                     target='_blank'
-                    href='https://chat.whatsapp.com/JCHTqEeRVJm3MRFUIW2IDp'
+                    href='https://wa.link/xmwrws'
                   >
                     aqui
-                  </a>{' '}
-                  para receber novidades sobre o curso.
+                  </a>.
                 </p>
               </DialogDescription>
             </DialogHeader>
@@ -125,10 +127,10 @@ function PreEnrollment() {
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle>Entrar para lista de espera</DialogTitle>
+              <DialogTitle>Entrar em contato para orçamentos e ou contratação!</DialogTitle>
               <DialogDescription>
-                Informe aqui seu email para ser notificado quando abrirá uma
-                nova turma para o curso The Next Dev - Full-stack Next.js 14.
+                Informe aqui seu email e número de telefone para que eu possa entrar em contato,
+                também peço que deixe uma breve descrição sobre sua necessidade!
               </DialogDescription>
             </DialogHeader>
             <Form {...form}>
@@ -175,6 +177,19 @@ function PreEnrollment() {
                           placeholder='(00) 00000-0000'
                           {...field}
                         />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name='about'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Fale um pouco do que você precisa</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder='Digite aqui...' {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

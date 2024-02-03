@@ -3,6 +3,7 @@
 import { ModeToggle } from './mode-toggle';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
+import PreEnrollment from './pre-enrollment';
 
 function IntroSection() {
   return (
@@ -35,25 +36,19 @@ function IntroSection() {
           Desenvolvedor <span className='text-primary'>Full-stack</span>
         </h1>
         <p className='max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8'>
-          Como professor e entusiasta da programação, encontro imenso prazer em compartilhar meu conhecimento 
-          e experiência com a próxima geração de desenvolvedores. Estou constantemente explorando novas tecnologias, 
-          metodologias e práticas recomendadas para garantir que minha equipe e meus alunos estejam sempre na 
+          Como professor e entusiasta da programação, encontro imenso prazer em compartilhar meu conhecimento
+          e experiência com a próxima geração de desenvolvedores. Estou constantemente explorando novas tecnologias,
+          metodologias e práticas recomendadas para garantir que minha equipe e meus alunos estejam sempre na
           vanguarda da indústria.
         </p>
         <div className='space-x-4'>
-          <a
-            href='#investment'
-            className='bg-primary py-2 px-4 text-md text-white rounded shadow-lg font-bold'
-            onClick={() => { console.log('Quero fazer parte');
-            }}
-          >
-            Entrar em contato
-          </a>
+          <PreEnrollment />
           <a
             href='#feature'
             className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
-            onClick={() => { console.log('Saiba mais');
-             }}
+            onClick={() => {
+              console.log('Saiba mais');
+            }}
           >
             Saiba mais
           </a>
