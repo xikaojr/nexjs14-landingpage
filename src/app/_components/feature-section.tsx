@@ -4,7 +4,10 @@ import {
   NextJs,
   Php,
   React,
-  Pgsql
+  Pgsql,
+  Mysql,
+  PhpLaravel,
+  NodeJs
 } from '@/components/stack-icons';
 
 const content: [] = [];
@@ -24,14 +27,17 @@ function FeatureSection() {
         </p>
       </div>
 
-      <div className='mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-4'>
-        <div className='relative overflow-hidden'>
-          <div className='flex h-[100px] flex-row gap-6 border-b-[2px] border-indigo-200 fill-current'>
-            <Php />
-            <NextJs />
-            <React />
-            <Pgsql />
-          </div>
+      <div className='mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-auto md:grid-cols-4'>
+        <div className='flex h-[100px] flex-row gap-6 border-b-[2px] border-indigo-200 fill-current'>
+          <Php />
+          <PhpLaravel />
+          <Pgsql />
+          <Mysql />
+        </div>
+        <div className='flex h-[100px] flex-row gap-6 border-b-[2px] border-indigo-200 fill-current'>
+          <NextJs />
+          <React />
+          <NodeJs />
         </div>
       </div>
       {content.length > 0 ?? <AccordeonSection content={content} />}
