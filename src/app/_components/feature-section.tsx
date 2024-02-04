@@ -34,22 +34,22 @@ function FeatureSection() {
         </p>
       </div>
 
-      <div className='mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-auto md:grid-cols-3'>
-        <div className='flex h-[100px] flex-row gap-5 border-b-[2px] border-indigo-200 fill-current'>
+      <div className='mx-auto grid justify-center md:gap-4 sm:gap-6 sm:grid-cols-2 md:max-w-auto md:grid-cols-3'>
+        <div className='flex h-[80px] flex-row items-center justify-evenly gap-5 border-b-[2px] border-indigo-200 fill-current'>
           <Php />
           <PhpLaravel />
           <ZendFrameWork />
           <Mysql />
           <Pgsql />
         </div>
-        <div className='flex h-[100px] flex-row gap-5 border-b-[2px] border-indigo-200 fill-current'>
+        <div className='flex h-[80px] flex-row items-center justify-evenly gap-5 border-b-[2px] border-indigo-200 fill-current'>
           <React />
           <NextJs />
           <AngularJs />
           <NodeJs />
           <MongoDB />
         </div>
-        <div className='flex h-[100px] flex-row gap-6 border-b-[2px] border-indigo-200 fill-current'>
+        <div className='flex h-[80px] flex-row items-center justify-evenly gap-6 border-b-[2px] border-indigo-200 fill-current'>
           <Python />
           <Azure />
           <Docker />
